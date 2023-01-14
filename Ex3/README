@@ -1,0 +1,64 @@
+alonmarko208
+
+
+
+
+=============================
+=      File description     =
+=============================
+SimpleHashSet.jaba - teh abstract class implements simpleset.
+OpenHashSet.java - extends simplehashset
+ClosedHashSet.java - extends simplehashset
+SimpleSetPerformanceAnalyzer.java - runs the time tests on the different sets.
+CollectionFacadeSet.java - cerates a facade (wrapper) for collections - to interact with the simpleset API.
+LinkListWrapper.java -  a wrapper for linked list of linked lists.
+TestRunner.java - the function that the analyzer class uses - it creates the whole data structures
+ needed for the tests and checks for the time.
+AnalyzerSimpleSetFactory.java - this creates the factory for the different sets we are using for the tests
+ - like in the spaceships ex.
+
+
+=============================
+=          Design           =
+=============================
+simpleset is an interface and simplehashset is an abstract class which closed and open hashsets extend and can
+ have instances of.
+so these two classes implement the methods from the abstract and interface. pretty straight forward as learned.
+and i have created a wrapper for linked list as suggested.
+
+for the analyzer part - split it in 3 parts. first of all i created the factory which creates all 
+the needed data structures and an name array for convinience.
+and than a testrunner class that actually does all the data loading and time c
+omputing so SimplePerformanceAnalyzer.java is mostly a driver function and looks
+very organized. i did not use args[] to give the file names - they are given manually.
+
+
+
+=============================
+=  Implementation details   =
+=============================
+so as stated above - for some reason its illegal to use linked lists of linked lists so as the suggestion 
+said i have created a wrapper class for it (like collection facade) so we can use it conviniently.
+the rest of openhashset part is pretty straight forward.
+
+for closedhash set the problem was at the moment we remove a value and this value index was a 
+"waypoint" for anotehr value to start the search for it.
+so it was impossible to put it as null becuase we need 
+to know if there was an value there and not empty cell so we can find the queried item we are
+currently searching! so i putfor deleted items a really long string that is unlikley to be entered manually 
+to the array so we can mark
+ this cell as not null (not empty) so we can search for items in the array in case of collisions in the 
+index handout.
+and as for the analyzer - as stated above - split in to 3 parts.
+
+=============================
+=    Answers to questions   =
+=============================
+
+linked list choice - take a look in implementation details.
+
+delete in closed hash - take a look in implementation details.
+
+
+
+

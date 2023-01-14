@@ -1,0 +1,15 @@
+alonmarko208
+
+
+File description:
+Patron.java - the patron class file
+Book.java - the book class file
+Library.java - the library class file
+
+Design:
+everything follows the API and there arent any significant addons to it. so it is pretty straight forward.
+
+implementation issues:
+i did use the listarray from collections. and it caused some issues and things i had to "go around" since i guess we were 
+supposed to use regular lists with fixed length and maybe use the index as indicators (ID). i used the hashcode for 
+an object as id since it is uniqe.
